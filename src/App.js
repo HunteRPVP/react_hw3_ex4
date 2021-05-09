@@ -3,24 +3,29 @@ import "./App.css";
 
 function App() {
 
-  const data = [
+ const data = [
     {
+      id: 1,
       title: "JSX",
       desc: "JSX — расширение языка JavaScript. JSX - это XML-подобное расширение синтаксиса для ECMAScript без какой-либо определенной семантики."
     },
     {
+      id: 2,
       title: "Компоненты",
       desc: "Компоненты позволяют разбить интерфейс на независимые части, про которые легко думать в отдельности.",
     },
     {
+      id: 3,
       title: "Пропсы",
       desc: "Props представляет коллекцию значений, которые ассоциированы с компонентом.",
     }
   ]
 
-  const newsCard = ({ title, desc }) => {
+  const newsCard = ({ id, title, desc }) => {
     return (
-      <div style={{
+      <div
+      key={id}
+      style={{
         boxSizing: 'border-box',
         padding: '10px',
         border: '1px solid black',
